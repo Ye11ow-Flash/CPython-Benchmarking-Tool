@@ -15,13 +15,13 @@ for pythonins in Myec2["Reservations"]:
         # Send script via SCP - "scp -i cpython.pem <path_to_script_file> ec2-user@ec2-3-89-101-123.compute-1.amazonaws.com:~/."
         ssh = SSHClient()
         ssh.load_system_host_keys()
-        ssh.connect('ec2-user@ec2-3-89-101-123.compute-1.amazonaws.com')
+        ssh.connect('ec2-user@ec2-3-89-101-123.compute-1.amazonaws.com:~/.')
         with SCPClient(ssh.get_transport()) as scp:
             scp.put('script.py', 'script.py')
 
         # Send command to execute the script
         commands = ['python3 script.py']
-        instance_ids = ['an_instance_id_string']
+        instance_ids = [printout]
         execute_commands_on_linux_instances(client, commands, instance_ids)
 
 
