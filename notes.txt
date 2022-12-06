@@ -1,0 +1,3 @@
+to get boto3 to find config file, export env var
+-- export AWS_CONFIG_FILE=<file location>
+-- EX: export AWS_CONFIG_FILE=config

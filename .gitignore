@@ -32,6 +32,9 @@ MANIFEST
 *.manifest
 *.spec
 
+#ignore environment configuration files that include secret info
+**/config
+
 
 # Unit test / coverage reports
 htmlcov/
