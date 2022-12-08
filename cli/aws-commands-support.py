@@ -20,7 +20,7 @@ def run_command(inst_id: str, *args) -> None:
         DocumentName="AWS-RunShellScript",
         Parameters={"commands": [" ".join(args)]},
     )
-    print(response)
+    print(response)  # currently does work due to ssm missing in EC2 instance on aws
 
 
 run_command(INSTANCE_ID, "echo", "hello world")

@@ -3,14 +3,6 @@ from rich import print
 
 from . import app
 
-data = {
-    "name": "Rick",
-    "age": 42,
-    "items": [{"name": "Portal Gun"}, {"name": "Plumbus"}],
-    "active": True,
-    "affiliation": None,
-}
-
 
 @app.command(
     "status",
